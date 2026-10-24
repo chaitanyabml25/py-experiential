@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Phase 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎮 Rock Paper Scissors</h1>
+    <p>Phase 3 - Advanced Gaming Tracker</p>
+</header>
+
+<main class="container">
+
+    <section class="stats">
+        <div class="card">
+            <h3>Player Wins</h3>
+            <p id="playerWins">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Computer Wins</h3>
+            <p id="computerWins">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Ties</h3>
+            <p id="ties">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Rounds Left</h3>
+            <p id="roundsLeft">25</p>
+        </div>
+    </section>
+
+    <section class="game-panel">
+        <h2>Choose Your Move</h2>
+
+        <div class="choices">
+            <button class="choice" data-choice="Rock">🪨 Rock</button>
+            <button class="choice" data-choice="Paper">📄 Paper</button>
+            <button class="choice" data-choice="Scissors">✂️ Scissors</button>
+        </div>
+
+        <div class="result">
+            <p id="playerChoice">Your choice: -</p>
+            <p id="computerChoice">Computer choice: -</p>
+            <h2 id="resultText">Let's Play!</h2>
+            <p id="roundInfo">Round 0 / 25</p>
+        </div>
+
+        <button id="restartBtn">🔄 Restart Game</button>
+    </section>
+
+    <section class="stats">
+        <div class="card">
+            <h3>Win Rate</h3>
+            <p id="winRate">0%</p>
+        </div>
+
+        <div class="card">
+            <h3>Longest Win Streak</h3>
+            <p id="longestStreak">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Rounds</h3>
+            <p id="totalRounds">0</p>
+        </div>
+    </section>
+
+    <section class="charts">
+        <div class="chart-card">
+            <h2>Game Performance</h2>
+            <div class="bar-chart">
+                <div class="bar-item">
+                    <span>Player</span>
+                    <div class="bar-bg">
+                        <div id="playerBar" class="bar player-bar"></div>
+                    </div>
+                    <span id="playerBarValue">0</span>
+                </div>
+
+                <div class="bar-item">
+                    <span>Computer</span>
+                    <div class="bar-bg">
+                        <div id="computerBar" class="bar computer-bar"></div>
+                    </div>
+                    <span id="computerBarValue">0</span>
+                </div>
+
+                <div class="bar-item">
+                    <span>Ties</span>
+                    <div class="bar-bg">
+                        <div id="tiesBar" class="bar tie-bar"></div>
+                    </div>
+                    <span id="tiesBarValue">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h2>Result Distribution</h2>
+            <div id="pieChart" class="pie-chart"></div>
+            <div class="legend">
+                <span>🟢 Player</span>
+                <span>🔴 Computer</span>
+                <span>🟡 Ties</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="history">
+        <h2>Game History</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Round</th>
+                        <th>Player</th>
+                        <th>Computer</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody">
+                    <tr>
+                        <td colspan="4">No games played yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Rock Paper Scissors | Phase 3 Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
